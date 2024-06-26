@@ -50,7 +50,7 @@ maxent.jar.args <- function(occs.z, bg.z, tune.tbl.i, other.settings) {
   if(!grepl("P", tune.tbl.i$fc)) out$args <- c(out$args, "noproduct")
   if(!grepl("T", tune.tbl.i$fc)) out$args <- c(out$args, "nothreshold") else out$args <- c(out$args, "threshold")
   out$args <- c(out$args, paste0("betamultiplier=", tune.tbl.i$rm, sep=""))
-  out <- c(out, other.settings$other.args)
+  out$args <- c(out$args, other.settings$other.args)
   return(out)
 }
 
